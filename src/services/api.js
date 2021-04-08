@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://desolate-garden-30570.herokuapp.com/"
+  baseURL: ""
 });
 
 export default api;
