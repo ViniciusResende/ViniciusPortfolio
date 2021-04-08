@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import LuisPauloPicture from '../assets/LuisPauloPicture.jpg';
+
 function Networkings() {
   const [slidesTransform, setSilidesTransform] = useState("0%");
 
@@ -79,7 +81,7 @@ function Networkings() {
                   <a href="https://www.linkedin.com/in/caio-campos-905955175/" target="_blank" rel="noreferrer" className="contentContainerButton">conhecer</a>
                 </div>
                 <div className="contentContainer slide-three">
-                  <img src="https://scontent.fplu9-1.fna.fbcdn.net/v/t1.0-1/s200x200/15578675_1218587701555723_1449265176420363146_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=7206a8&_nc_ohc=Oz4eGMPL2DYAX8mbJpJ&_nc_ht=scontent.fplu9-1.fna&tp=7&oh=3b3b1c7b761c9372b1352911d1e64896&oe=606DC4E6" alt="Luis Paulo"/>
+                  <img src={LuisPauloPicture} alt="Luis Paulo"/>
                   <p className="contentContainerSentence">
                     Luis Paulo Alves
                   </p>

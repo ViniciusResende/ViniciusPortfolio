@@ -13,20 +13,19 @@ function MyProjects() {
   const [isEmailApiVisible, setIsEmailApiVisible] = useState(false);
 
   const [modalWidth, setModalWidth] = useState('50%');
-  const [modalHeight, setModalHeight] = useState('70%');
+  const [modalHeight, setModalHeight] = useState('72%');
 
   useEffect(() =>{ 
-    if(window.innerWidth <= 1024){
-      setModalWidth('80%');
-      setModalHeight('55%');
-    }
-    if(window.innerWidth <= 768){
-      setModalHeight('60%');
-    }
-    if(window.innerWidth <= 540){
-      setModalWidth('100%');
-      setModalHeight('100%');
-    }    
+    window.innerHeight <= 900 && setModalHeight('78%');
+    window.innerHeight <= 768 && setModalHeight('95%');
+
+    window.innerWidth <= 1600 && setModalWidth('80%');
+    window.innerWidth <= 1024 && setModalWidth('80%');
+    window.innerWidth <= 1024 && setModalHeight('60%');
+    window.innerWidth <= 768 && setModalHeight('60%');
+    window.innerWidth <= 540 && setModalWidth('100%');
+    window.innerWidth <= 540 && setModalHeight('100%');
+      
   }, [])
 
   const openModalRIVPR = () => {

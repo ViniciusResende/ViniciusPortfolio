@@ -15,7 +15,7 @@ function Services() {
               <FontAwesomeIcon icon={faReact} className="frameIcon"/>
             </div>
             <h4 className="frameTitle">Junior Frontend Developer</h4>
-            <p className="frameDescription">Atualmente sou um desenvolvedor frontend junior, tenho habilidades com HTML5, CSS3, JavaScript, TypeScrip e ReactJs. Assim, busco sempre melhorar minhas habilidades nessa área da melhor forma.</p>
+            <p className="frameDescription">Atualmente sou um desenvolvedor frontend junior, tenho habilidades com HTML5, CSS3, JavaScript, TypeScript e ReactJs. Assim, busco sempre melhorar minhas habilidades nessas áreas da melhor forma.</p>
           </div>
           <div className="frame">
             <div className="iconContainer">
