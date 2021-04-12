@@ -4,8 +4,10 @@ import LuisPauloPicture from '../assets/LuisPauloPicture.jpg';
 
 function Networkings() {
   const [slidesTransform, setSilidesTransform] = useState("0%");
+  const [isClicked, setIsClicked] = useState(false);
 
   const changeSlideTransformRight = () => {
+    setIsClicked(true);
     if(slidesTransform === "0%"){
       setSilidesTransform("-100%");
     } else if(slidesTransform === "-100%"){
@@ -13,9 +15,13 @@ function Networkings() {
     } else if (slidesTransform === "-200%"){
       setSilidesTransform("0%");
     }
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 5000)
   }
 
   const changeSlideTransformLeft = () => {
+    setIsClicked(true);
     if(slidesTransform === "0%"){
       setSilidesTransform("-200%");
     } else if(slidesTransform === "-100%"){
@@ -23,23 +29,28 @@ function Networkings() {
     } else if (slidesTransform === "-200%"){
       setSilidesTransform("-100%");
     }
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 5000)
   }
 
   useEffect(() =>{
-    if(slidesTransform === "0%"){
-      setTimeout(() => {
-        setSilidesTransform("-100%");
-      }, 5000)      
-    } else if(slidesTransform === "-100%"){
-      setTimeout(() => {
-        setSilidesTransform("-200%");
-      }, 5000)
-    } else if (slidesTransform === "-200%"){
-      setTimeout(() => {
-        setSilidesTransform("0%");
-      }, 5000)
-    }
-  }, [slidesTransform])
+    if(!isClicked){
+      if(slidesTransform === "0%"){
+        setTimeout(() => {
+          setSilidesTransform("-100%");
+        }, 7000)      
+      } else if(slidesTransform === "-100%"){
+        setTimeout(() => {
+          setSilidesTransform("-200%");
+        }, 7000)
+      } else if (slidesTransform === "-200%"){
+        setTimeout(() => {
+          setSilidesTransform("0%");
+        }, 7000)
+      }
+    }    
+  }, [slidesTransform, isClicked])
 
   return (
     <div>
